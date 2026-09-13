@@ -124,7 +124,7 @@ body {
     color: #10b981;
 }
 
-/* Tela de Status (Substitui o alert) */
+/* Tela de Status */
 .status-screen {
     background-color: #050505;
     color: #10b981;
@@ -163,7 +163,7 @@ body {
 .coin-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Reduzido para caber o novo visor de status */
+    gap: 10px; 
 }
 
 .coin-btn {

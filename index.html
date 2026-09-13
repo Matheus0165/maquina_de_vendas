@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://tse3.mm.bing.net/th/id/OIP.lrQb-nWyc9Ohq5fmzSs_8wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" type="image/x-icon">
-    <title>Máquina de Vendas</title>
+      <link rel="shortcut icon" href="https://tse3.mm.bing.net/th/id/OIP.lrQb-nWyc9Ohq5fmzSs_8wHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" type="image/x-icon">
+    <title>Máquina de Vendas </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +12,11 @@
         <h2 class="title">AUTO-ATENDIMENTO</h2>
         
         <div class="panel">
+            <!-- Coluna Esquerda: Dinheiro -->
             <div class="left-col">
                 <div class="label-group">
                     <div class="label">SALDO INSERIDO</div>
-                    <div class="label-alert" id="limite-alerta" style="display: none;">MÁX: $ 0.30</div>
+                    <div class="label-alert" id="limite-alerta" style="display: none;">MÁX: $ 0.50</div>
                 </div>
                 
                 <div class="visor" id="visor-container">
@@ -36,12 +37,14 @@
 
             <div class="divider"></div>
 
+            <!-- Coluna Direita: Troco e Escolha -->
             <div class="right-col">
                 <div class="troco-section">
                     <div class="label center">COMPARTIMENTO DE TROCO</div>
                     <div class="slot troco-slot" id="troco-slot"></div>
                     <div class="hint center" id="troco-hint">Vazio</div>
                     
+                    <!-- Botões de ação do troco -->
                     <div class="troco-actions" id="troco-actions" style="display: none;">
                         <button class="action-btn return-btn" onclick="reaproveitarTroco()">+ SALDO</button>
                         <button class="action-btn take-btn" onclick="retirarTroco()">RETIRAR</button>
@@ -50,35 +53,37 @@
 
                 <div class="label mt-20">SELECIONE O PRODUTO:</div>
                 <div class="product-buttons">
-                    <button class="btn prod-btn" onclick="comprar(30, '🥤')">
+                    <!-- Preços baseados nos estados finais do JFLAP: 30, 35, 40, 45, 50 -->
+                    <button class="btn prod-btn" onclick="comprar(50, '🥤')">
                         <span class="prod-icon">🥤</span> 
                         <span class="prod-name">Copo de Refri</span> 
-                        <span class="prod-price">$0.30</span>
+                        <span class="prod-price">$0.50</span>
                     </button>
-                    <button class="btn prod-btn" onclick="comprar(25, '🥔')">
+                    <button class="btn prod-btn" onclick="comprar(45, '🥔')">
                         <span class="prod-icon">🥔</span> 
                         <span class="prod-name">Salgadinho</span> 
-                        <span class="prod-price">$0.25</span>
+                        <span class="prod-price">$0.45</span>
                     </button>
-                    <button class="btn prod-btn" onclick="comprar(15, '🥛')">
-                        <span class="prod-icon">🥛</span> 
-                        <span class="prod-name">Copo de Água</span> 
-                        <span class="prod-price">$0.15</span>
-                    </button>
-                    <button class="btn prod-btn" onclick="comprar(10, '🍫')">
+                    <button class="btn prod-btn" onclick="comprar(40, '🍫')">
                         <span class="prod-icon">🍫</span> 
                         <span class="prod-name">Barrinha</span> 
-                        <span class="prod-price">$0.10</span>
+                        <span class="prod-price">$0.40</span>
                     </button>
-                    <button class="btn prod-btn" onclick="comprar(5, '🍬')">
+                    <button class="btn prod-btn" onclick="comprar(35, '🥛')">
+                        <span class="prod-icon">🥛</span> 
+                        <span class="prod-name">Copo de Água</span> 
+                        <span class="prod-price">$0.35</span>
+                    </button>
+                    <button class="btn prod-btn" onclick="comprar(30, '🍬')">
                         <span class="prod-icon">🍬</span> 
                         <span class="prod-name">Bala</span> 
-                        <span class="prod-price">$0.05</span>
+                        <span class="prod-price">$0.30</span>
                     </button>
                 </div>
             </div>
         </div>
 
+        <!-- Parte Inferior: Saída de Produto -->
         <div class="bottom-panel">
             <div class="label center">SAÍDA DE PRODUTOS</div>
             <div class="slot product-slot" id="produto-slot" onclick="pegarProduto()"></div>

@@ -1,4 +1,4 @@
-const MAX_SALDO_CENTAVOS = 30; 
+const MAX_SALDO_CENTAVOS = 50; // O maior estado final do JFLAP é 50
 let saldoCentavos = 0;
 let trocoPendenteCentavos = 0;
 let timerStatus;
@@ -9,9 +9,10 @@ const slotProduto = document.getElementById('produto-slot');
 const slotTroco = document.getElementById('troco-slot');
 const trocoHint = document.getElementById('troco-hint');
 const trocoActions = document.getElementById('troco-actions');
-const limiteAlerta = document.getElementById('limite-alerta');
 const statusScreen = document.getElementById('status-screen');
+const limiteAlerta = document.getElementById('limite-alerta');
 
+// Função para mostrar mensagens nativas na máquina
 function mostrarMensagem(msg, erro = true) {
     statusScreen.innerText = msg;
     
@@ -20,7 +21,8 @@ function mostrarMensagem(msg, erro = true) {
     } else {
         statusScreen.classList.remove('status-error');
     }
-
+    
+    // Limpa o texto após 2.5 segundos
     clearTimeout(timerStatus);
     timerStatus = setTimeout(() => {
         statusScreen.innerText = "AGUARDANDO...";
@@ -57,6 +59,7 @@ function inserir(centavos) {
         return;
     }
     
+    // Transbordo se o limite absoluto (50) for atingido
     if (saldoCentavos === MAX_SALDO_CENTAVOS) {
         limiteAlerta.style.display = 'block';
         limiteAlerta.classList.add('pisca-vermelho');
@@ -102,7 +105,7 @@ function comprar(precoCentavos, emoji) {
             gerarTroco(trocoCompra);
         }
         
-        saldoCentavos = 0;
+        saldoCentavos = 0; 
         atualizarVisor();
         mostrarMensagem("OBRIGADO!", false);
     } else {
@@ -158,5 +161,5 @@ function pegarProduto() {
     }
 }
 
-
+// Inicializa a tela
 atualizarVisor();
