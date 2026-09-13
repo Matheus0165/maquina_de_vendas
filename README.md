@@ -19,7 +19,7 @@ O objetivo principal deste sistema é usar a lógica das máquinas de estados, l
 * Tratamento de transbordo: rejeição automática de moedas que ultrapassem o limite de saldo.
 
 **Lógica criada no Jflap**
-![Lógica criada no Jflap]()
+![Lógica criada no Jflap](logica-Jflap.jpg)
 ## 👥 Equipe
 * **Matheus Varela de Paula**
 * **Zack Zayry Gomes Da Silva**
