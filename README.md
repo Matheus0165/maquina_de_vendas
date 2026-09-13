@@ -17,7 +17,7 @@ O objetivo principal deste sistema é usar a lógica das máquinas de estados, l
 * Processamento de compras com verificação automática de saldo suficiente.
 * Compartimento de troco inteligente com opções de reaproveitar dinheiro (+ Saldo) ou guardá-lo (Retirar).
 * Tratamento de transbordo: rejeição automática de moedas que ultrapassem o limite de saldo.
-
+![Lógica criada no Jflap](logica_Jflap.jpg)
 ## 👥 Equipe
 * **Matheus Varela de Paula**
 * **Zack Zayry Gomes Da Silva**
