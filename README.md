@@ -1,4 +1,4 @@
-# 📚 Máquina de Vendas - Projeto Escolar
+# 📚 Máquina de Vendas 
 
 Este projeto foi desenvolvido como trabalho avaliativo para a disciplina de **[ LINGUAGENS FORMAIS E AUTÔMATOS]**. 
 
